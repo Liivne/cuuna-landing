@@ -4,7 +4,7 @@ Sitio estático (HTML + CSS + JS, sin dependencias). Para verlo, abre `index.htm
 o sirve la carpeta con cualquier servidor estático, por ejemplo:
 
 ```
-python -m http.server 5510 --directory cuuna-landing
+python -m http.server 5510
 ```
 
 ## Marca
