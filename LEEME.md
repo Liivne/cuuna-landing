@@ -30,7 +30,7 @@ Los pies de foto del carrusel se editan en `index.html` (`<figcaption>`).
 
 ## Redes
 - Instagram: https://www.instagram.com/cuuna.cl
-- LinkedIn: https://www.linkedin.com/company/cuunacl/
+- LinkedIn: https://www.linkedin.com/company/cuunacl/home/
 - Linktree: https://linktr.ee/cuuna.cl
 
 ## Pendientes (buscar `TODO` en `index.html`)
