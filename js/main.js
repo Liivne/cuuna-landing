@@ -63,15 +63,6 @@
     update();
   }
 
-  // Enlaces aún sin URL real: avisar en vez de saltar al inicio
-  document.querySelectorAll('a[data-todo]').forEach((a) => {
-    if (a.getAttribute('href') !== '#') return;
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      console.warn(`Falta configurar el enlace de ${a.dataset.todo} en index.html`);
-    });
-  });
-
   // Aparición suave al hacer scroll
   const targets = document.querySelectorAll(
     '.section-head, .split > *, .mission li, .project, .conf, .news, .member, .card, .announce-inner, .join-inner'

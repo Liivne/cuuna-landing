@@ -28,8 +28,12 @@ dejar la imagen con este nombre y aparece sola:
 
 Los pies de foto del carrusel se editan en `index.html` (`<figcaption>`).
 
+## Redes
+- Instagram: https://www.instagram.com/cuuna.cl
+- LinkedIn: https://www.linkedin.com/company/cuunacl/
+- Linktree: https://linktr.ee/cuuna.cl
+
 ## Pendientes (buscar `TODO` en `index.html`)
-- URL de Instagram, LinkedIn y correo de contacto (contacto, carrusel y pie de página).
 - Datos de transferencia para donaciones (banco, cuenta, RUT) o enlace a una plataforma.
 - Requisitos, plazos y enlace del formulario para postular a la DeCI.
 - Nombres y breve descripción de cada integrante del Directorio 2026–2027.
