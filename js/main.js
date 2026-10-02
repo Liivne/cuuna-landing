@@ -40,8 +40,8 @@
     if (nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
   });
 
-  // Al elegir un destino, cerrar todo
-  nav.querySelectorAll('a[href^="#"]').forEach((a) => a.addEventListener('click', () => { closeAll(); setMenu(false); }));
+  // Al volver con el botón Atrás, la página puede restaurarse con el menú abierto
+  window.addEventListener('pageshow', () => { closeAll(); setMenu(false); });
 
   // Carrusel de fotos
   const track = document.querySelector('.carousel');
@@ -65,7 +65,7 @@
 
   // Aparición suave al hacer scroll
   const targets = document.querySelectorAll(
-    '.section-head, .split > *, .mission li, .project, .conf, .news, .member, .card, .announce-inner, .join-inner'
+    '.section-head, .split > *, .mission li, .project, .conf, .news, .member, .card, .announce-inner, .join-inner, .partner, .socials li'
   );
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const io = new IntersectionObserver((entries) => {
