@@ -293,7 +293,6 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 }
 .mission li:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .mission .num { font-size: 1.9rem; font-weight: 800; color: var(--sky); line-height: 1; }
-.mission li:nth-child(4) .num { color: var(--green); }
 .mission p { margin: 0; font-size: .93rem; line-height: 1.55; color: var(--ink-2); }
 
 .organs { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
@@ -303,18 +302,19 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
   display: flex; align-items: center; gap: 10px;
 }
 .organs li::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--sky); }
-.organs li:first-child { background: var(--navy); color: #fff; border-color: var(--navy); }
-.organs li:first-child::before { background: var(--green); }
 .split-top > div > p { margin-bottom: 0; }
 
 .partners { display: flex; flex-wrap: wrap; gap: 16px; }
 .partner {
-  display: flex; align-items: center; gap: 14px; background: #fff;
-  border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 18px 26px;
-  font-weight: 800; letter-spacing: .04em;
+  display: flex; align-items: center; gap: 16px; background: #fff;
+  border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px 22px 14px 14px;
+  font-weight: 800; letter-spacing: .04em; text-decoration: none;
+  transition: border-color .15s, box-shadow .15s;
 }
-.partner img { height: 40px; width: auto; }
-.partner img + span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.partner:hover { border-color: var(--sky); box-shadow: var(--shadow); }
+.partner img { width: 64px; height: 64px; object-fit: contain; }
+.partner .arrow { color: var(--sky-ink); transition: transform .15s; }
+.partner:hover .arrow { transform: translateX(3px); }
 
 /* ---------- Proyectos ---------- */
 .project {

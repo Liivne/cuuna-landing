@@ -24,7 +24,6 @@ dejar la imagen con este nombre y aparece sola:
 | `img/fotos/mun-escolar.jpg` | Proyecto MUN Escolar | 4:3 |
 | `img/fotos/noticia-worldmun.jpg`, `noticia-amnuch.jpg`, `noticia-cepal.jpg` | Noticias | 16:10 |
 | `img/directorio/presidencia.jpg`, `vicepresidencia.jpg`, `secretaria.jpg`, `tesoreria.jpg`, `director-1.jpg` … `director-3.jpg` | Directorio | cuadrada |
-| `img/alianzas/amnuch.png` | Alianzas | logo con fondo transparente |
 
 Los pies de foto del carrusel se editan en `index.html` (`<figcaption>`).
 
