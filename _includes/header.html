@@ -1,0 +1,35 @@
+{%- assign actual = page.seccion | default: page.url -%}
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="CUUNA, ir al inicio"{% if page.url == '/' %} aria-current="page"{% endif %}>
+      <img class="brand-iso" src="{{ '/img/isotipo.png' | relative_url }}" alt="" width="48" height="48">
+      <img class="brand-word" src="{{ '/img/logotipo.png' | relative_url }}" alt="CUUNA" width="116" height="22">
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="menu" aria-label="Principal">
+      <ul class="nav-list">
+        {%- for item in site.data.menu %}
+        {%- if item.hijos %}
+        {%- assign en_grupo = false %}
+        {%- for h in item.hijos %}{% if h.url == actual %}{% assign en_grupo = true %}{% endif %}{% endfor %}
+        <li class="nav-item has-sub{% if en_grupo %} is-current{% endif %}">
+          <button class="nav-link" aria-expanded="false">{{ item.titulo }} {% include icono.html nombre="chev" %}</button>
+          <ul class="sub">
+            {%- for h in item.hijos %}
+            <li><a href="{{ h.url | relative_url }}"{% if h.url == actual %} aria-current="page"{% endif %}>{{ h.titulo }}</a></li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- else %}
+        <li class="nav-item{% if item.url == actual %} is-current{% endif %}"><a class="nav-link" href="{{ item.url | relative_url }}"{% if item.url == actual %} aria-current="page"{% endif %}>{{ item.titulo }}</a></li>
+        {%- endif %}
+        {%- endfor %}
+        <li class="nav-item nav-cta"><a class="btn btn-primary btn-sm" href="{{ '/donaciones.html' | relative_url }}">Donar</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

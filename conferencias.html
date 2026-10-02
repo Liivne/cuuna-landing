@@ -1,143 +1,32 @@
-<!doctype html>
-<html lang="es-CL">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Conferencias · CUUNA</title>
-  <meta name="description" content="CUUNA es una ONG chilena que promueve los Modelos de Naciones Unidas, las relaciones internacionales y los valores de la ONU en las juventudes de Chile.">
-  <meta name="theme-color" content="#37b2f8">
-  <link rel="icon" type="image/png" href="img/favicon.png">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <a class="skip" href="#contenido">Saltar al contenido</a>
+---
+layout: page
+title: Conferencias
+titulo: Dónde ha estado y estará la DeCI
+eyebrow: Conferencias
+lead: Las conferencias internacionales en las que compite la Delegación Chilena Interuniversitaria.
+---
+<section class="section section-dark">
+  <div class="wrap">
+    <ol class="timeline">
+      {%- for c in site.data.conferencias %}
+      <li class="conf{% if c.estado == 'Participamos' %} is-past{% endif %}">
+        <span class="conf-status">{{ c.estado }}</span>
+        <span class="conf-year">{{ c.anio }}</span>
+        <h2 class="conf-name">{{ c.nombre }}</h2>
+        <p class="conf-place">{% include icono.html nombre="pin" %}{{ c.lugar }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
 
-  <!-- Encabezado: es igual en todas las páginas; si cambia, cambiarlo en todas. -->
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="./" aria-label="CUUNA, ir al inicio">
-        <img class="brand-iso" src="img/isotipo.png" alt="" width="48" height="48">
-        <img class="brand-word" src="img/logotipo.png" alt="CUUNA" width="116" height="22">
-      </a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav" id="menu" aria-label="Principal">
-        <ul class="nav-list">
-          <li class="nav-item has-sub">
-            <button class="nav-link" aria-expanded="false">Sobre CUUNA <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
-            <ul class="sub">
-              <li><a href="que-es-cuuna.html">¿Qué es CUUNA?</a></li>
-              <li><a href="mision.html">¿Cuál es nuestra misión?</a></li>
-              <li><a href="estructura.html">¿Cómo se estructura?</a></li>
-              <li><a href="alianzas.html">Alianzas</a></li>
-            </ul>
-          </li>
-          <li class="nav-item has-sub">
-            <button class="nav-link" aria-expanded="false">Qué hacemos <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
-            <ul class="sub">
-              <li><a href="deci.html">Delegación Chilena Interuniversitaria (DeCI)</a></li>
-              <li><a href="mun-escolar.html">MUN Escolar</a></li>
-            </ul>
-          </li>
-          <li class="nav-item is-current"><a class="nav-link" href="conferencias.html" aria-current="page">Conferencias</a></li>
-          <li class="nav-item"><a class="nav-link" href="directorio.html">Directorio</a></li>
-          <li class="nav-item has-sub">
-            <button class="nav-link" aria-expanded="false">Conoce más <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
-            <ul class="sub">
-              <li><a href="noticias.html">Noticias</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-              <li><a href="donaciones.html">Donaciones</a></li>
-            </ul>
-          </li>
-          <li class="nav-item nav-cta"><a class="btn btn-primary btn-sm" href="donaciones.html">Donar</a></li>
-        </ul>
-      </nav>
+<section class="announce" aria-labelledby="anuncio-titulo">
+  <div class="wrap announce-inner">
+    <span class="tag tag-dark">Anuncio</span>
+    <div class="announce-copy">
+      <h2 id="anuncio-titulo">Sé parte de la generación 2027</h2>
+      <p>Estamos conformando la delegación que irá a Riga y a Ciudad de Panamá.</p>
     </div>
-  </header>
-
-  <main id="contenido">
-    <section class="page-hero">
-      <div class="wrap">
-        <p class="eyebrow">Conferencias</p>
-        <h1>Dónde ha estado y estará la DeCI</h1>
-        <p class="lead">Las conferencias internacionales en las que compite la Delegación Chilena Interuniversitaria.</p>
-      </div>
-    </section>
-
-    <section class="section section-dark">
-      <div class="wrap">
-        <ol class="timeline">
-          <li class="conf is-past">
-            <span class="conf-status">Participamos</span>
-            <span class="conf-year">2026</span>
-            <h2 class="conf-name">Harvard WorldMUN</h2>
-            <p class="conf-place"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14s5-4.2 5-8a5 5 0 0 0-10 0c0 3.8 5 8 5 8Z"/><circle cx="8" cy="6" r="1.8"/></svg>Lima, Perú</p>
-          </li>
-          <li class="conf">
-            <span class="conf-status">Próxima</span>
-            <span class="conf-year">2027</span>
-            <h2 class="conf-name">Harvard WorldMUN</h2>
-            <p class="conf-place"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14s5-4.2 5-8a5 5 0 0 0-10 0c0 3.8 5 8 5 8Z"/><circle cx="8" cy="6" r="1.8"/></svg>Riga, Letonia</p>
-          </li>
-          <li class="conf">
-            <span class="conf-status">Próxima</span>
-            <span class="conf-year">2027</span>
-            <h2 class="conf-name">Harvard National MUN Latin America</h2>
-            <p class="conf-place"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14s5-4.2 5-8a5 5 0 0 0-10 0c0 3.8 5 8 5 8Z"/><circle cx="8" cy="6" r="1.8"/></svg>Ciudad de Panamá, Panamá</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="announce" aria-labelledby="anuncio-titulo">
-      <div class="wrap announce-inner">
-        <span class="tag tag-dark">Anuncio</span>
-        <div class="announce-copy">
-          <h2 id="anuncio-titulo">Sé parte de la generación 2027</h2>
-          <p>Estamos conformando la delegación que irá a Riga y a Ciudad de Panamá.</p>
-        </div>
-        <a class="btn btn-dark" href="deci.html">Conocer la DeCI <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Pie: igual en todas las páginas. -->
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="img/logotipo-negativo.png" alt="CUUNA" width="150" height="28">
-        <p>Chilean Universities United Nations Association. Corporación sin fines de lucro.</p>
-      </div>
-      <nav aria-label="Pie de página">
-        <ul class="footer-links">
-          <li><a href="que-es-cuuna.html">Sobre CUUNA</a></li>
-          <li><a href="deci.html">DeCI</a></li>
-          <li><a href="mun-escolar.html">MUN Escolar</a></li>
-          <li><a href="conferencias.html">Conferencias</a></li>
-          <li><a href="directorio.html">Directorio</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="donaciones.html">Donar</a></li>
-        </ul>
-      </nav>
-      <ul class="socials socials-footer">
-        <li><a href="https://www.instagram.com/cuuna.cl" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" class="fill"/></svg></a></li>
-        <li><a href="https://www.linkedin.com/company/cuunacl/home/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5v6M7.5 7.5v.01M11 16.5v-6M11 13.2c0-1.6 1-2.7 2.5-2.7s2.5 1 2.5 2.7v3.3"/></svg></a></li>
-        <li><a href="https://linktr.ee/cuuna.cl" target="_blank" rel="noopener" aria-label="Linktree"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"/></svg></a></li>
-      </ul>
-    </div>
-    <div class="wrap footer-bottom">
-      <p>© <span id="year">2026</span> CUUNA · Chile</p>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
+    <a class="btn btn-dark" href="{{ '/deci.html' | relative_url }}">Conocer la DeCI {% include icono.html nombre="flecha" %}</a>
+  </div>
+</section>

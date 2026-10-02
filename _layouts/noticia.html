@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Noticias · {{ page.categoria }}</p>
+    <h1>{{ page.title }}</h1>
+    {%- if page.fecha and page.fecha != "" %}
+    <p class="lead">{% include fecha.html valor=page.fecha %}</p>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap article">
+    {%- if page.imagen and page.imagen != "" %}
+    {% include foto.html src=page.imagen label=page.title alt=page.title clase="article-photo" carga="eager" %}
+    {%- endif %}
+    <div class="prose">
+      {%- assign cuerpo = content | strip -%}
+      {%- if cuerpo != "" %}
+      {{ content }}
+      {%- else %}
+      <p>{{ page.resumen }}</p>
+      {%- endif %}
+    </div>
+    <a class="link-arrow" href="{{ '/noticias.html' | relative_url }}">{% include icono.html nombre="flecha-atras" %} Todas las noticias</a>
+  </div>
+</section>

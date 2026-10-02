@@ -467,6 +467,15 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .donate h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); }
 .board + .link-arrow { margin-top: 40px; }
 
+.news-date { margin: 12px 0 0; font-size: .82rem; font-weight: 600; color: var(--sky-ink); }
+.news-date + h3 { margin-top: 4px; }
+.member .bio { margin: 6px 0 0; font-size: .82rem; line-height: 1.45; color: var(--ink-2); }
+.article { max-width: 820px; }
+.article-photo { aspect-ratio: 16 / 9; margin-bottom: 32px; }
+.article .prose { font-size: 1.05rem; }
+.article .prose img { border-radius: var(--radius-sm); margin: 1em 0; }
+.article > .link-arrow { margin-top: 24px; }
+
 /* ---------- Aparición al hacer scroll ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }

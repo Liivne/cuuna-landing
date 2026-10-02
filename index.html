@@ -1,267 +1,139 @@
-<!doctype html>
-<html lang="es-CL">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CUUNA · Chilean Universities United Nations Association</title>
-  <meta name="description" content="CUUNA es una ONG chilena que promueve los Modelos de Naciones Unidas, las relaciones internacionales y los valores de la ONU en las juventudes de Chile.">
-  <meta name="theme-color" content="#37b2f8">
-  <link rel="icon" type="image/png" href="img/favicon.png">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <a class="skip" href="#contenido">Saltar al contenido</a>
+---
+layout: default
+title: Inicio
+---
+{%- assign sitio = site.data.sitio -%}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ site.nombre_completo }}</p>
+      <h1>Jóvenes de Chile en la conversación <span class="hl">global</span>.</h1>
+      <p class="lead">Somos una organización sin fines de lucro que promueve los Modelos de Naciones Unidas, las relaciones internacionales y los valores de la ONU en las juventudes de todo Chile.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="{{ '/deci.html' | relative_url }}">Conoce la DeCI</a>
+        <a class="btn btn-ghost" href="{{ '/que-es-cuuna.html' | relative_url }}">Quiénes somos</a>
+      </div>
+    </div>
 
-  <!-- Encabezado: es igual en todas las páginas; si cambia, cambiarlo en todas. -->
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="./" aria-label="CUUNA, ir al inicio" aria-current="page">
-        <img class="brand-iso" src="img/isotipo.png" alt="" width="48" height="48">
-        <img class="brand-word" src="img/logotipo.png" alt="CUUNA" width="116" height="22">
+    <div class="hero-media">
+      <div class="ring" aria-hidden="true"></div>
+      {% include foto.html src=sitio.fotos.portada label="Foto principal" clase="photo-hero" alt="Delegación de CUUNA en una conferencia" carga="eager" %}
+      <div class="hero-chip">
+        <span class="dot" aria-hidden="true"></span>
+        <span><strong>Harvard WorldMUN 2026</strong><br>Lima, Perú</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="announce" aria-labelledby="anuncio-titulo">
+  <div class="wrap announce-inner">
+    <span class="tag tag-dark">Anuncio</span>
+    <div class="announce-copy">
+      <h2 id="anuncio-titulo">Sé parte de la Delegación Chilena Interuniversitaria</h2>
+      <p>Estamos conformando la generación que representará a Chile en Harvard WorldMUN 2027 y Harvard National MUN Latin America 2027.</p>
+    </div>
+    <a class="btn btn-dark" href="{{ '/deci.html' | relative_url }}">Quiero saber más {% include icono.html nombre="flecha" %}</a>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="exp-titulo">
+  <div class="wrap">
+    <div class="section-head row">
+      <div>
+        <p class="eyebrow">Experiencia CUUNA</p>
+        <h2 id="exp-titulo">Así se vive un MUN</h2>
+      </div>
+      <div class="carousel-ctrl">
+        <button class="icon-btn" data-dir="-1" aria-label="Fotos anteriores"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg></button>
+        <button class="icon-btn" data-dir="1" aria-label="Fotos siguientes"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="carousel" tabindex="0" aria-label="Galería de fotos">
+    {%- for f in site.data.experiencia %}
+    <figure class="slide">{% include foto.html src=f.foto label="Foto" alt=f.pie %}<figcaption>{{ f.pie }}</figcaption></figure>
+    {%- endfor %}
+  </div>
+  <div class="wrap">
+    <a class="link-arrow" href="{{ sitio.redes.instagram }}" target="_blank" rel="noopener">Ver más en Instagram {% include icono.html nombre="flecha" %}</a>
+  </div>
+</section>
+
+<section class="section section-tint" aria-labelledby="mas-titulo">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Más de CUUNA</p>
+      <h2 id="mas-titulo">Una organización hecha por y para jóvenes</h2>
+      <p>Promovemos el desarrollo de habilidades blandas, el conocimiento de las relaciones internacionales y los valores de las Naciones Unidas en las juventudes de Chile, principalmente a través de los Modelos de Naciones Unidas.</p>
+      <div class="actions">
+        <a class="btn btn-ghost" href="{{ '/que-es-cuuna.html' | relative_url }}">Conoce más sobre CUUNA</a>
+      </div>
+    </div>
+    {% include foto.html src=sitio.fotos.equipo label="Foto del equipo" alt="Integrantes de CUUNA" %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="hacemos-titulo">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Qué hacemos</p>
+      <h2 id="hacemos-titulo">Nuestros proyectos</h2>
+    </div>
+    <div class="teaser-grid">
+      <a class="news teaser" href="{{ '/deci.html' | relative_url }}">
+        {% include foto.html src=sitio.fotos.deci label="Foto DeCI" %}
+        <div class="news-body">
+          <span class="tag">Proyecto principal</span>
+          <h3>Delegación Chilena Interuniversitaria (DeCI)</h3>
+          <p>Estudiantes de distintas casas de estudio que compiten juntos, como una sola delegación, en MUNs en el extranjero.</p>
+          <span class="link-arrow">Conocer la DeCI {% include icono.html nombre="flecha" %}</span>
+        </div>
       </a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav" id="menu" aria-label="Principal">
-        <ul class="nav-list">
-          <li class="nav-item has-sub">
-            <button class="nav-link" aria-expanded="false">Sobre CUUNA <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
-            <ul class="sub">
-              <li><a href="que-es-cuuna.html">¿Qué es CUUNA?</a></li>
-              <li><a href="mision.html">¿Cuál es nuestra misión?</a></li>
-              <li><a href="estructura.html">¿Cómo se estructura?</a></li>
-              <li><a href="alianzas.html">Alianzas</a></li>
-            </ul>
-          </li>
-          <li class="nav-item has-sub">
-            <button class="nav-link" aria-expanded="false">Qué hacemos <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
-            <ul class="sub">
-              <li><a href="deci.html">Delegación Chilena Interuniversitaria (DeCI)</a></li>
-              <li><a href="mun-escolar.html">MUN Escolar</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="conferencias.html">Conferencias</a></li>
-          <li class="nav-item"><a class="nav-link" href="directorio.html">Directorio</a></li>
-          <li class="nav-item has-sub">
-            <button class="nav-link" aria-expanded="false">Conoce más <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
-            <ul class="sub">
-              <li><a href="noticias.html">Noticias</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-              <li><a href="donaciones.html">Donaciones</a></li>
-            </ul>
-          </li>
-          <li class="nav-item nav-cta"><a class="btn btn-primary btn-sm" href="donaciones.html">Donar</a></li>
-        </ul>
-      </nav>
+      <a class="news teaser" href="{{ '/mun-escolar.html' | relative_url }}">
+        {% include foto.html src=sitio.fotos.mun_escolar label="Foto MUN Escolar" %}
+        <div class="news-body">
+          <span class="tag tag-green">Colegios</span>
+          <h3>MUN Escolar</h3>
+          <p>Capacitamos a estudiantes y docentes para que organicen sus propios Modelos de Naciones Unidas en sus colegios.</p>
+          <span class="link-arrow">Conocer MUN Escolar {% include icono.html nombre="flecha" %}</span>
+        </div>
+      </a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main id="contenido">
-
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Chilean Universities United Nations Association</p>
-          <h1>Jóvenes de Chile en la conversación <span class="hl">global</span>.</h1>
-          <p class="lead">Somos una organización sin fines de lucro que promueve los Modelos de Naciones Unidas, las relaciones internacionales y los valores de la ONU en las juventudes de todo Chile.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="deci.html">Conoce la DeCI</a>
-            <a class="btn btn-ghost" href="que-es-cuuna.html">Quiénes somos</a>
-          </div>
-        </div>
-
-        <div class="hero-media">
-          <div class="ring" aria-hidden="true"></div>
-          <!-- Reemplazar: img/fotos/hero.jpg (vertical 4:5, mín. 1200 px) -->
-          <figure class="photo photo-hero" data-label="Foto principal">
-            <img src="img/fotos/hero.jpg" alt="Delegación de CUUNA en una conferencia" onerror="this.remove()">
-          </figure>
-          <div class="hero-chip">
-            <span class="dot" aria-hidden="true"></span>
-            <span><strong>Harvard WorldMUN 2026</strong><br>Lima, Perú</span>
-          </div>
-        </div>
+<section class="section section-tint" aria-labelledby="not-titulo">
+  <div class="wrap">
+    <div class="section-head row">
+      <div>
+        <p class="eyebrow">Noticias</p>
+        <h2 id="not-titulo">CUUNA presente</h2>
       </div>
-    </section>
-
-    <section class="announce" aria-labelledby="anuncio-titulo">
-      <div class="wrap announce-inner">
-        <span class="tag tag-dark">Anuncio</span>
-        <div class="announce-copy">
-          <h2 id="anuncio-titulo">Sé parte de la Delegación Chilena Interuniversitaria</h2>
-          <p>Estamos conformando la generación que representará a Chile en Harvard WorldMUN 2027 y Harvard National MUN Latin America 2027.</p>
-        </div>
-        <a class="btn btn-dark" href="deci.html">Quiero saber más <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="exp-titulo">
-      <div class="wrap">
-        <div class="section-head row">
-          <div>
-            <p class="eyebrow">Experiencia CUUNA</p>
-            <h2 id="exp-titulo">Así se vive un MUN</h2>
-          </div>
-          <div class="carousel-ctrl">
-            <button class="icon-btn" data-dir="-1" aria-label="Fotos anteriores"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg></button>
-            <button class="icon-btn" data-dir="1" aria-label="Fotos siguientes"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
-          </div>
-        </div>
-      </div>
-      <!-- Reemplazar: img/fotos/experiencia-1.jpg … experiencia-8.jpg (formato 4:5, como Instagram) -->
-      <div class="carousel" tabindex="0" aria-label="Galería de fotos">
-        <figure class="slide"><div class="photo" data-label="Foto 1"><img src="img/fotos/experiencia-1.jpg" alt="" loading="lazy" onerror="this.remove()"></div><figcaption>Harvard WorldMUN 2026 · Lima</figcaption></figure>
-        <figure class="slide"><div class="photo" data-label="Foto 2"><img src="img/fotos/experiencia-2.jpg" alt="" loading="lazy" onerror="this.remove()"></div><figcaption>La DeCI en comité</figcaption></figure>
-        <figure class="slide"><div class="photo" data-label="Foto 3"><img src="img/fotos/experiencia-3.jpg" alt="" loading="lazy" onerror="this.remove()"></div><figcaption>AMNUCH Valparaíso</figcaption></figure>
-        <figure class="slide"><div class="photo" data-label="Foto 4"><img src="img/fotos/experiencia-4.jpg" alt="" loading="lazy" onerror="this.remove()"></div><figcaption>Visita a la CEPAL</figcaption></figure>
-        <figure class="slide"><div class="photo" data-label="Foto 5"><img src="img/fotos/experiencia-5.jpg" alt="" loading="lazy" onerror="this.remove()"></div><figcaption>MUN Escolar</figcaption></figure>
-        <figure class="slide"><div class="photo" data-label="Foto 6"><img src="img/fotos/experiencia-6.jpg" alt="" loading="lazy" onerror="this.remove()"></div><figcaption>Preparación de la delegación</figcaption></figure>
-        <figure class="slide"><div class="photo" data-label="Foto 7"><img src="img/fotos/experiencia-7.jpg" alt="" loading="lazy" onerror="this.remove()"></div><figcaption>Asamblea General</figcaption></figure>
-        <figure class="slide"><div class="photo" data-label="Foto 8"><img src="img/fotos/experiencia-8.jpg" alt="" loading="lazy" onerror="this.remove()"></div><figcaption>Equipo CUUNA</figcaption></figure>
-      </div>
-      <div class="wrap">
-        <a class="link-arrow" href="https://www.instagram.com/cuuna.cl" target="_blank" rel="noopener">Ver más en Instagram <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-      </div>
-    </section>
-
-    <section class="section section-tint" aria-labelledby="mas-titulo">
-      <div class="wrap split">
-        <div>
-          <p class="eyebrow">Más de CUUNA</p>
-          <h2 id="mas-titulo">Una organización hecha por y para jóvenes</h2>
-          <p>Promovemos el desarrollo de habilidades blandas, el conocimiento de las relaciones internacionales y los valores de las Naciones Unidas en las juventudes de Chile, principalmente a través de los Modelos de Naciones Unidas.</p>
-          <div class="actions">
-            <a class="btn btn-ghost" href="que-es-cuuna.html">Conoce más sobre CUUNA</a>
-          </div>
-        </div>
-        <!-- Reemplazar: img/fotos/sobre.jpg -->
-        <figure class="photo" data-label="Foto del equipo">
-          <img src="img/fotos/sobre.jpg" alt="Integrantes de CUUNA" loading="lazy" onerror="this.remove()">
-        </figure>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="hacemos-titulo">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Qué hacemos</p>
-          <h2 id="hacemos-titulo">Nuestros proyectos</h2>
-        </div>
-        <div class="teaser-grid">
-          <a class="news teaser" href="deci.html">
-            <figure class="photo" data-label="Foto DeCI"><img src="img/fotos/deci.jpg" alt="" loading="lazy" onerror="this.remove()"></figure>
-            <div class="news-body">
-              <span class="tag">Proyecto principal</span>
-              <h3>Delegación Chilena Interuniversitaria (DeCI)</h3>
-              <p>Estudiantes de distintas casas de estudio que compiten juntos, como una sola delegación, en MUNs en el extranjero.</p>
-              <span class="link-arrow">Conocer la DeCI <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
-            </div>
-          </a>
-          <a class="news teaser" href="mun-escolar.html">
-            <figure class="photo" data-label="Foto MUN Escolar"><img src="img/fotos/mun-escolar.jpg" alt="" loading="lazy" onerror="this.remove()"></figure>
-            <div class="news-body">
-              <span class="tag tag-green">Colegios</span>
-              <h3>MUN Escolar</h3>
-              <p>Capacitamos a estudiantes y docentes para que organicen sus propios Modelos de Naciones Unidas en sus colegios.</p>
-              <span class="link-arrow">Conocer MUN Escolar <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-tint" aria-labelledby="not-titulo">
-      <div class="wrap">
-        <div class="section-head row">
-          <div>
-            <p class="eyebrow">Noticias</p>
-            <h2 id="not-titulo">CUUNA presente</h2>
-          </div>
-          <a class="link-arrow head-link" href="noticias.html">Ver todas las noticias <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-        </div>
-        <div class="news-grid">
-          <article class="news">
-            <figure class="photo" data-label="Foto WorldMUN"><img src="img/fotos/noticia-worldmun.jpg" alt="" loading="lazy" onerror="this.remove()"></figure>
-            <div class="news-body">
-              <span class="tag">Conferencia</span>
-              <h3>La DeCI compitió en Harvard WorldMUN 2026</h3>
-              <p>La Delegación Chilena Interuniversitaria viajó a Lima, Perú, para competir en uno de los MUNs más grandes del mundo.</p>
-            </div>
-          </article>
-          <article class="news">
-            <figure class="photo" data-label="Foto AMNUCH"><img src="img/fotos/noticia-amnuch.jpg" alt="" loading="lazy" onerror="this.remove()"></figure>
-            <div class="news-body">
-              <span class="tag tag-green">Alianza</span>
-              <h3>Presentes en AMNUCH Valparaíso</h3>
-              <p>Estuvimos presentes en AMNUCH Valparaíso, junto a nuestra organización aliada.</p>
-            </div>
-          </article>
-          <article class="news">
-            <figure class="photo" data-label="Foto CEPAL"><img src="img/fotos/noticia-cepal.jpg" alt="" loading="lazy" onerror="this.remove()"></figure>
-            <div class="news-body">
-              <span class="tag">Actividad</span>
-              <h3>Visita a la CEPAL</h3>
-              <p>Asistimos a la Comisión Económica para América Latina y el Caribe, la comisión regional de la ONU con sede en Santiago.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Contacto y donaciones">
-      <div class="wrap duo">
-        <article class="card">
-          <p class="eyebrow">Contacto</p>
-          <h2>Conversemos</h2>
-          <p>¿Quieres postular a la DeCI, llevar un MUN a tu colegio o trabajar con nosotros?</p>
-          <a class="btn btn-ghost" href="contacto.html">Contáctanos</a>
-        </article>
-        <article class="card card-sky">
-          <p class="eyebrow">Donaciones</p>
-          <h2>Que el costo no deje a nadie fuera</h2>
-          <p>Tu aporte nos permite apoyar financieramente a estudiantes de todo Chile para que puedan ser parte de la DeCI.</p>
-          <a class="btn btn-dark" href="donaciones.html">Quiero donar</a>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <!-- Pie: igual en todas las páginas. -->
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="img/logotipo-negativo.png" alt="CUUNA" width="150" height="28">
-        <p>Chilean Universities United Nations Association. Corporación sin fines de lucro.</p>
-      </div>
-      <nav aria-label="Pie de página">
-        <ul class="footer-links">
-          <li><a href="que-es-cuuna.html">Sobre CUUNA</a></li>
-          <li><a href="deci.html">DeCI</a></li>
-          <li><a href="mun-escolar.html">MUN Escolar</a></li>
-          <li><a href="conferencias.html">Conferencias</a></li>
-          <li><a href="directorio.html">Directorio</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="donaciones.html">Donar</a></li>
-        </ul>
-      </nav>
-      <ul class="socials socials-footer">
-        <li><a href="https://www.instagram.com/cuuna.cl" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" class="fill"/></svg></a></li>
-        <li><a href="https://www.linkedin.com/company/cuunacl/home/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5v6M7.5 7.5v.01M11 16.5v-6M11 13.2c0-1.6 1-2.7 2.5-2.7s2.5 1 2.5 2.7v3.3"/></svg></a></li>
-        <li><a href="https://linktr.ee/cuuna.cl" target="_blank" rel="noopener" aria-label="Linktree"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"/></svg></a></li>
-      </ul>
+      <a class="link-arrow head-link" href="{{ '/noticias.html' | relative_url }}">Ver todas las noticias {% include icono.html nombre="flecha" %}</a>
     </div>
-    <div class="wrap footer-bottom">
-      <p>© <span id="year">2026</span> CUUNA · Chile</p>
+    {% include noticias-ordenadas.html %}
+    <div class="news-grid">
+      {%- for n in noticias limit: 3 %}
+      {% include noticia-card.html noticia=n %}
+      {%- endfor %}
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="js/main.js"></script>
-</body>
-</html>
+<section class="section" aria-label="Contacto y donaciones">
+  <div class="wrap duo">
+    <article class="card">
+      <p class="eyebrow">Contacto</p>
+      <h2>Conversemos</h2>
+      <p>¿Quieres postular a la DeCI, llevar un MUN a tu colegio o trabajar con nosotros?</p>
+      <a class="btn btn-ghost" href="{{ '/contacto.html' | relative_url }}">Contáctanos</a>
+    </article>
+    <article class="card card-sky">
+      <p class="eyebrow">Donaciones</p>
+      <h2>Que el costo no deje a nadie fuera</h2>
+      <p>Tu aporte nos permite apoyar financieramente a estudiantes de todo Chile para que puedan ser parte de la DeCI.</p>
+      <a class="btn btn-dark" href="{{ '/donaciones.html' | relative_url }}">Quiero donar</a>
+    </article>
+  </div>
+</section>

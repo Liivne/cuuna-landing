@@ -78,5 +78,4 @@
     targets.forEach((el) => { el.classList.add('reveal'); io.observe(el); });
   }
 
-  document.getElementById('year').textContent = new Date().getFullYear();
 })();

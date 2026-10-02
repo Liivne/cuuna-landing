@@ -1,0 +1,9 @@
+{%- comment -%}
+  Foto con marcador: si "src" está vacío se ve el isotipo con la etiqueta.
+  Parámetros: src, label, clase, alt, carga ("eager" para la portada).
+{%- endcomment -%}
+<figure class="photo {{ include.clase }}" data-label="{{ include.label }}">
+  {%- if include.src and include.src != "" -%}
+  <img src="{{ include.src | relative_url }}" alt="{{ include.alt }}" loading="{{ include.carga | default: 'lazy' }}">
+  {%- endif -%}
+</figure>

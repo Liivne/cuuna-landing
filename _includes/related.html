@@ -1,0 +1,16 @@
+{%- comment -%} Solo para páginas que declaran "grupo" (un desplegable del menú). {%- endcomment -%}
+{%- if page.grupo -%}
+{%- assign grupo = site.data.menu | where: "id", page.grupo | first -%}
+{%- endif -%}
+{%- if grupo and grupo.hijos -%}
+<section class="related" aria-label="{{ page.related_titulo | default: 'Sigue conociendo CUUNA' }}">
+  <div class="wrap">
+    <p class="eyebrow">{{ page.related_titulo | default: "Sigue conociendo CUUNA" }}</p>
+    <div class="related-links">
+      {%- for h in grupo.hijos %}{% unless h.url == page.url %}
+      <a class="related-link" href="{{ h.url | relative_url }}">{{ h.titulo }} {% include icono.html nombre="flecha" %}</a>
+      {%- endunless %}{% endfor %}
+    </div>
+  </div>
+</section>
+{%- endif -%}

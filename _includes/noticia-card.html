@@ -1,0 +1,11 @@
+{%- assign n = include.noticia -%}
+<a class="news teaser" href="{{ n.url | relative_url }}">
+  {% include foto.html src=n.imagen label="Foto" alt=n.title %}
+  <div class="news-body">
+    <span class="tag{% if n.categoria == 'Alianza' %} tag-green{% endif %}">{{ n.categoria }}</span>
+    {%- if n.fecha and n.fecha != "" %}<p class="news-date">{% include fecha.html valor=n.fecha %}</p>{% endif %}
+    <h3>{{ n.title }}</h3>
+    <p>{{ n.resumen }}</p>
+    <span class="link-arrow">Leer más {% include icono.html nombre="flecha" %}</span>
+  </div>
+</a>

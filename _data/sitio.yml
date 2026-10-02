@@ -1,0 +1,19 @@
+# Datos generales del sitio (editables desde Pages CMS en "Datos del sitio").
+redes:
+  instagram: https://www.instagram.com/cuuna.cl
+  linkedin: https://www.linkedin.com/company/cuunacl/home/
+  linktree: https://linktr.ee/cuuna.cl
+
+# Fotos fijas de las páginas. Vacío = se muestra el marcador con el isotipo.
+fotos:
+  portada: ""
+  equipo: ""
+  deci: ""
+  mun_escolar: ""
+
+# Vacío = "Por completar".
+donaciones:
+  nombre: Chilean Universities United Nations Association
+  banco: ""
+  cuenta: ""
+  rut: ""

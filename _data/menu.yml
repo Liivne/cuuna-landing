@@ -1,0 +1,33 @@
+# Menú principal. Un ítem con "hijos" es un desplegable que solo agrupa páginas.
+# "id" se usa en la propiedad "grupo" de cada página para armar "Sigue conociendo".
+- titulo: Sobre CUUNA
+  id: sobre
+  hijos:
+    - titulo: ¿Qué es CUUNA?
+      url: /que-es-cuuna.html
+    - titulo: ¿Cuál es nuestra misión?
+      url: /mision.html
+    - titulo: ¿Cómo se estructura?
+      url: /estructura.html
+    - titulo: Alianzas
+      url: /alianzas.html
+- titulo: Qué hacemos
+  id: hacemos
+  hijos:
+    - titulo: Delegación Chilena Interuniversitaria (DeCI)
+      url: /deci.html
+    - titulo: MUN Escolar
+      url: /mun-escolar.html
+- titulo: Conferencias
+  url: /conferencias.html
+- titulo: Directorio
+  url: /directorio.html
+- titulo: Conoce más
+  id: conoce
+  hijos:
+    - titulo: Noticias
+      url: /noticias.html
+    - titulo: Contacto
+      url: /contacto.html
+    - titulo: Donaciones
+      url: /donaciones.html

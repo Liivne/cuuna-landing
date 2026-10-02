@@ -1,0 +1,15 @@
+{%- comment -%}
+  Deja en "noticias" la colección ordenada: primero las que tienen fecha (más nuevas
+  arriba) y después las que aún no la tienen (fecha ausente o vacía).
+{%- endcomment -%}
+{%- assign con_fecha = "" | split: "" -%}
+{%- assign sin_fecha = "" | split: "" -%}
+{%- for n in site.noticias -%}
+  {%- if n.fecha and n.fecha != "" -%}
+    {%- assign con_fecha = con_fecha | push: n -%}
+  {%- else -%}
+    {%- assign sin_fecha = sin_fecha | push: n -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign con_fecha = con_fecha | sort: "fecha" | reverse -%}
+{%- assign noticias = con_fecha | concat: sin_fecha -%}

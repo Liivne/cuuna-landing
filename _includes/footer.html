@@ -1,0 +1,28 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <img src="{{ '/img/logotipo-negativo.png' | relative_url }}" alt="CUUNA" width="150" height="28">
+      <p>{{ site.nombre_completo }}. Corporación sin fines de lucro.</p>
+    </div>
+    <nav aria-label="Pie de página">
+      <ul class="footer-links">
+        <li><a href="{{ '/que-es-cuuna.html' | relative_url }}">Sobre CUUNA</a></li>
+        <li><a href="{{ '/deci.html' | relative_url }}">DeCI</a></li>
+        <li><a href="{{ '/mun-escolar.html' | relative_url }}">MUN Escolar</a></li>
+        <li><a href="{{ '/conferencias.html' | relative_url }}">Conferencias</a></li>
+        <li><a href="{{ '/directorio.html' | relative_url }}">Directorio</a></li>
+        <li><a href="{{ '/noticias.html' | relative_url }}">Noticias</a></li>
+        <li><a href="{{ '/contacto.html' | relative_url }}">Contacto</a></li>
+        <li><a href="{{ '/donaciones.html' | relative_url }}">Donar</a></li>
+      </ul>
+    </nav>
+    <ul class="socials socials-footer">
+      <li><a href="{{ site.data.sitio.redes.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">{% include icono.html nombre="instagram" %}</a></li>
+      <li><a href="{{ site.data.sitio.redes.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">{% include icono.html nombre="linkedin" %}</a></li>
+      <li><a href="{{ site.data.sitio.redes.linktree }}" target="_blank" rel="noopener" aria-label="Linktree">{% include icono.html nombre="linktree" %}</a></li>
+    </ul>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© {{ site.time | date: "%Y" }} CUUNA · Chile</p>
+  </div>
+</footer>

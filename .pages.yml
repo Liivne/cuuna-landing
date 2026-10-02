@@ -1,0 +1,197 @@
+# Configuración de Pages CMS (https://pagescms.org): define qué se puede editar
+# desde el formulario web y dónde se guarda cada cosa en el repositorio.
+media:
+  input: img
+  output: /img
+
+content:
+  - name: noticias
+    label: Noticias
+    type: collection
+    path: _noticias
+    filename: "{primary}.md"
+    view:
+      fields: [title, categoria, fecha]
+      primary: title
+      sort: [fecha, title]
+      default:
+        sort: fecha
+        order: desc
+    fields:
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: fecha
+        label: Fecha
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: categoria
+        label: Categoría
+        type: select
+        required: true
+        options:
+          values: [Conferencia, Alianza, Actividad]
+      - name: imagen
+        label: Foto (formato horizontal)
+        type: image
+        options:
+          path: img/fotos
+      - name: resumen
+        label: Resumen
+        type: text
+        required: true
+        description: Una o dos frases. Se muestra en la tarjeta de la noticia.
+      - name: body
+        label: Texto completo
+        type: rich-text
+        description: Opcional. Si queda vacío, la página de la noticia muestra el resumen.
+
+  - name: directorio
+    label: Directorio
+    type: file
+    path: _data/directorio.yml
+    format: yaml
+    list: true
+    fields:
+      - name: cargo
+        label: Cargo
+        type: string
+        required: true
+      - name: nombre
+        label: Nombre
+        type: string
+        description: Vacío = "Próximamente".
+      - name: descripcion
+        label: Breve descripción
+        type: text
+      - name: foto
+        label: Foto (cuadrada)
+        type: image
+        options:
+          path: img/directorio
+
+  - name: conferencias
+    label: Conferencias
+    type: file
+    path: _data/conferencias.yml
+    format: yaml
+    list: true
+    fields:
+      - name: anio
+        label: Año
+        type: number
+        required: true
+      - name: nombre
+        label: Conferencia
+        type: string
+        required: true
+      - name: lugar
+        label: Lugar
+        type: string
+        required: true
+      - name: estado
+        label: Estado
+        type: select
+        required: true
+        options:
+          values: [Participamos, Próxima]
+
+  - name: experiencia
+    label: Carrusel de fotos (portada)
+    type: file
+    path: _data/experiencia.yml
+    format: yaml
+    list: true
+    fields:
+      - name: foto
+        label: Foto (formato 4:5)
+        type: image
+        options:
+          path: img/fotos
+      - name: pie
+        label: Pie de foto
+        type: string
+        required: true
+
+  - name: alianzas
+    label: Alianzas
+    type: file
+    path: _data/alianzas.yml
+    format: yaml
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre
+        type: string
+        required: true
+      - name: logo
+        label: Logo
+        type: image
+        options:
+          path: img/alianzas
+      - name: enlace
+        label: Enlace (web o Instagram)
+        type: string
+        required: true
+
+  - name: sitio
+    label: Datos del sitio
+    type: file
+    path: _data/sitio.yml
+    format: yaml
+    fields:
+      - name: redes
+        label: Redes sociales
+        type: object
+        fields:
+          - name: instagram
+            label: Instagram
+            type: string
+          - name: linkedin
+            label: LinkedIn
+            type: string
+          - name: linktree
+            label: Linktree
+            type: string
+      - name: fotos
+        label: Fotos de las páginas
+        type: object
+        fields:
+          - name: portada
+            label: Portada (vertical 4:5)
+            type: image
+            options:
+              path: img/fotos
+          - name: equipo
+            label: Equipo (¿Qué es CUUNA?)
+            type: image
+            options:
+              path: img/fotos
+          - name: deci
+            label: DeCI
+            type: image
+            options:
+              path: img/fotos
+          - name: mun_escolar
+            label: MUN Escolar
+            type: image
+            options:
+              path: img/fotos
+      - name: donaciones
+        label: Datos para donar
+        type: object
+        fields:
+          - name: nombre
+            label: Nombre del titular
+            type: string
+          - name: banco
+            label: Banco
+            type: string
+          - name: cuenta
+            label: Tipo y número de cuenta
+            type: string
+          - name: rut
+            label: RUT
+            type: string

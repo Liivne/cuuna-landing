@@ -1,0 +1,32 @@
+title: CUUNA
+nombre_completo: Chilean Universities United Nations Association
+description: >-
+  CUUNA es una ONG chilena que promueve los Modelos de Naciones Unidas, las relaciones
+  internacionales y los valores de la ONU en las juventudes de Chile.
+lang: es-CL
+
+# Dirección pública en GitHub Pages. Si el sitio se muda a un dominio propio,
+# cambiar url y dejar baseurl vacío.
+url: https://liivne.github.io
+baseurl: /cuuna-landing
+
+markdown: kramdown
+
+collections:
+  noticias:
+    output: true
+    permalink: /noticias/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: noticias
+    values:
+      layout: noticia
+      seccion: /noticias.html
+
+exclude:
+  - LEEME.md
+  - .pages.yml
+  - .claude
+  - .github
