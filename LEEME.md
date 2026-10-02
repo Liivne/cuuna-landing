@@ -43,17 +43,32 @@ fecha van al final.
 Las páginas que están dentro de un desplegable del menú declaran `grupo:` (`sobre`,
 `hacemos`) y muestran al final enlaces a sus páginas hermanas.
 
+## Ver el sitio en tu equipo
+Requiere Ruby (probado con Ruby 4.0 en Windows). La primera vez:
+
+```
+bundle config set --local path vendor/bundle
+bundle install
+```
+
+Luego, cada vez:
+
+```
+bundle exec jekyll serve
+```
+
+y abrir http://localhost:4000/cuuna-landing/. Al guardar un archivo el sitio se
+recompila solo (basta recargar el navegador).
+
+GitHub Pages compila con la gema `github-pages`, que todavía no admite Ruby 4. Por eso
+el `Gemfile` usa Jekyll 3.10 directo: es el mismo motor, sin los plugins de
+`github-pages` (este sitio no usa ninguno), y el resultado es idéntico al publicado.
+
 ## Revisar cambios antes de publicarlos
-Trabajar en una rama distinta de `main`: el workflow `Verificar sitio`
-(`.github/workflows/verificar.yml`) la compila con el mismo constructor de GitHub Pages
-y deja el resultado como artefacto `sitio` en la pestaña Actions. Para verlo, se
-descarga en una carpeta `cuuna-landing/` y se sirve la carpeta que la contiene:
-
-```
-python -m http.server 5511
-```
-
-y se abre http://localhost:5511/cuuna-landing/.
+Para cambios grandes, trabajar en una rama distinta de `main`. El workflow
+`Verificar sitio` (`.github/workflows/verificar.yml`) la compila con el constructor
+exacto de GitHub Pages y avisa si algo falla, sin publicar nada. El resultado
+compilado queda como artefacto `sitio` en la pestaña Actions.
 
 ## Marca
 Según `Brandbook_CUUNA`: celeste `#37b2f8`, celeste claro `#80d5fc`, verde `#57b626`,

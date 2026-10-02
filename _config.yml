@@ -11,6 +11,8 @@ url: https://liivne.github.io
 baseurl: /cuuna-landing
 
 markdown: kramdown
+kramdown:
+  input: GFM   # lo mismo que fuerza GitHub Pages
 
 collections:
   noticias:
@@ -27,6 +29,9 @@ defaults:
 
 exclude:
   - LEEME.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
   - .pages.yml
   - .claude
   - .github
