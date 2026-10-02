@@ -5,14 +5,13 @@ description: >-
   internacionales y los valores de la ONU en las juventudes de Chile.
 lang: es-CL
 
-# Dirección pública en GitHub Pages. Si el sitio se muda a un dominio propio,
-# cambiar url y dejar baseurl vacío.
-url: https://liivne.github.io
-baseurl: /cuuna-landing
+# Dirección pública (Vercel sirve el sitio desde la raíz, sin subcarpeta).
+url: ""
+baseurl: ""
 
 markdown: kramdown
 kramdown:
-  input: GFM   # lo mismo que fuerza GitHub Pages
+  input: GFM   # Markdown al estilo GitHub
 
 collections:
   noticias:
@@ -32,6 +31,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-  - .pages.yml
   - .claude
-  - .github
+  - .vercel
+  - vercel.json

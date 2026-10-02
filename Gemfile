@@ -1,9 +1,6 @@
 source "https://rubygems.org"
 
-# GitHub Pages compila con la gema github-pages 232 (Jekyll 3.10), que no admite
-# Ruby 4. Para la vista local se usa Jekyll 3.10 directo: es el mismo motor, sin
-# los plugins de github-pages, que este sitio no usa. La prueba exacta antes de
-# publicar sigue siendo el workflow "Verificar sitio".
+# Jekyll 3.10. Vercel compila con Ruby 3.3; en local funciona también con Ruby 4.
 gem "jekyll", "~> 3.10.0"
 gem "kramdown-parser-gfm"
 
