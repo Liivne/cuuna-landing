@@ -20,8 +20,8 @@
       url: /mun-escolar.html
 - titulo: Conferencias
   url: /conferencias.html
-- titulo: Directorio
-  url: /directorio.html
+- titulo: Equipo
+  url: /equipo.html
 - titulo: Conoce más
   id: conoce
   hijos:

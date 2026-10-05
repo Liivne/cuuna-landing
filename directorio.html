@@ -1,22 +1,20 @@
 ---
-layout: page
-title: Directorio
-titulo: Quiénes dirigen CUUNA
-eyebrow: Directorio 2026–2027
-lead: "El Directorio dirige y administra la institución. Sus integrantes son elegidos cada año por la Asamblea General, pueden ser reelegidos hasta dos veces y deciden de forma democrática: un integrante, un voto."
+layout: null
 ---
-<section class="section">
-  <div class="wrap">
-    <ul class="board">
-      {%- for m in site.data.directorio %}
-      <li class="member">
-        {% include foto.html src=m.foto label="" clase="avatar" alt=m.nombre %}
-        <p class="role">{{ m.cargo }}</p>
-        <p class="name">{% if m.nombre and m.nombre != "" %}{{ m.nombre }}{% else %}Próximamente{% endif %}</p>
-        {%- if m.descripcion and m.descripcion != "" %}<p class="bio">{{ m.descripcion }}</p>{% endif %}
-      </li>
-      {%- endfor %}
-    </ul>
-    <a class="link-arrow" href="{{ '/estructura.html' | relative_url }}">Cómo se estructura CUUNA {% include icono.html nombre="flecha" %}</a>
-  </div>
-</section>
+{%- comment -%}
+  La página "Directorio" pasó a llamarse "Equipo". Este archivo solo redirige la
+  dirección antigua, para no romper enlaces ya compartidos.
+{%- endcomment -%}
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <title>Equipo · CUUNA</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ '/equipo.html' | relative_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/equipo.html' | relative_url }}">
+</head>
+<body>
+  <p>Esta página ahora se llama <a href="{{ '/equipo.html' | relative_url }}">Equipo</a>.</p>
+</body>
+</html>

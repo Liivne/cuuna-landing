@@ -13,7 +13,7 @@ actualiza solo.
 | Qué | Archivo | Dónde se ve |
 |---|---|---|
 | Noticias | `_noticias/*.md`, una por archivo | Portada (las 3 más recientes), `noticias.html` y una página por noticia |
-| Directorio | `_data/directorio.yml` | `directorio.html` |
+| Equipo (Directorio, comisiones y coordinaciones) | `_data/equipo.yml` | `equipo.html` |
 | Conferencias | `_data/conferencias.yml` | `conferencias.html` |
 | Carrusel de fotos | `_data/experiencia.yml` | Portada |
 | Alianzas | `_data/alianzas.yml` | `alianzas.html` |
@@ -35,7 +35,7 @@ resumen: Una o dos frases para la tarjeta.
 
 Las fotos se suben a `img/` y se escriben con su ruta desde la raíz (`/img/...`).
 Lo que queda vacío se muestra como marcador (el isotipo en vez de la foto,
-"Próximamente" en el Directorio, "Por completar" en los datos para donar).
+"Próximamente" en el Equipo, "Por completar" en los datos para donar).
 Las noticias con fecha se ordenan de la más nueva a la más antigua; las que no tienen
 fecha van al final.
 
@@ -76,5 +76,5 @@ tipografía Montserrat. Los logos están en `img/` (isotipo, logotipo y logotipo
 - Fecha de cada noticia (sin ella se ordenan alfabéticamente).
 - Datos de transferencia para donaciones (banco, cuenta, RUT) o enlace a una plataforma.
 - Requisitos, plazos y enlace del formulario para postular a la DeCI (`TODO` en `deci.html`).
-- Nombres, descripción y fotos del Directorio 2026–2027.
+- Integrantes del equipo 2026–2027 (Directorio, comisiones y coordinaciones), con descripción y foto.
 - Fotos de portada, equipo, DeCI, MUN Escolar, carrusel y noticias.
