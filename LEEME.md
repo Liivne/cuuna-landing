@@ -5,6 +5,10 @@ Cada push a `main` publica el sitio; cada push a otra rama (o cada pull request)
 una vista previa con su propia dirección, para revisar antes de publicar.
 La configuración de la compilación está en `vercel.json`.
 
+La dirección antigua (https://liivne.github.io/cuuna-landing/) sigue funcionando: la
+rama `gh-pages` solo contiene redirecciones a la misma página en Vercel. No hay que
+tocarla al agregar páginas.
+
 ## Editar contenido
 El contenido que cambia seguido vive en archivos de datos, no en el HTML. Se pueden
 editar directamente en GitHub (botón del lápiz) y al guardar en `main` el sitio se
