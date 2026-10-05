@@ -1,0 +1,61 @@
+# Equipo 2026–2027, agrupado por órgano (en el orden de "¿Cómo se estructura?").
+#
+# Cada órgano tiene:
+#   id           → ancla en la página (equipo.html#id); no cambiar
+#   nombre       → título de la sección
+#   descripcion  → opcional; vacío = no se muestra
+#   integrantes  → lista de personas. Vacía ([]) = "Pronto presentaremos a sus integrantes."
+#
+# Cada integrante: cargo, nombre (vacío = "Próximamente"), descripcion (opcional) y
+# foto (cuadrada, p. ej. /img/equipo/nombre-apellido.jpg; vacía = marcador).
+
+- id: directorio
+  nombre: Directorio
+  descripcion: "Dirige y administra la institución. Sus integrantes son elegidos cada año por la Asamblea General, pueden ser reelegidos hasta dos veces y deciden de forma democrática: un integrante, un voto."
+  integrantes:
+    - cargo: Presidencia
+      nombre: ""
+      descripcion: ""
+      foto: ""
+    - cargo: Vicepresidencia
+      nombre: ""
+      descripcion: ""
+      foto: ""
+    - cargo: Secretaría
+      nombre: ""
+      descripcion: ""
+      foto: ""
+    - cargo: Tesorería
+      nombre: ""
+      descripcion: ""
+      foto: ""
+    - cargo: Dirección
+      nombre: ""
+      descripcion: ""
+      foto: ""
+    - cargo: Dirección
+      nombre: ""
+      descripcion: ""
+      foto: ""
+    - cargo: Dirección
+      nombre: ""
+      descripcion: ""
+      foto: ""
+
+# TODO: descripción e integrantes de la Comisión de Ética.
+- id: comision-de-etica
+  nombre: Comisión de Ética
+  descripcion: ""
+  integrantes: []
+
+# TODO: descripción e integrantes de la Comisión Revisora de Cuentas.
+- id: comision-revisora-de-cuentas
+  nombre: Comisión Revisora de Cuentas
+  descripcion: ""
+  integrantes: []
+
+# TODO: descripción e integrantes de las Coordinaciones.
+- id: coordinaciones
+  nombre: Coordinaciones
+  descripcion: ""
+  integrantes: []

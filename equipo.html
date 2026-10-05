@@ -1,0 +1,43 @@
+---
+layout: page
+title: Equipo
+titulo: Quiénes hacen CUUNA
+eyebrow: Equipo 2026–2027
+lead: Las personas que integran los órganos de CUUNA, elegidos por la Asamblea General.
+---
+<section class="section">
+  <div class="wrap">
+    <nav class="team-nav" aria-label="Órganos de CUUNA">
+      {%- for g in site.data.equipo %}
+      <a class="related-link" href="#{{ g.id }}">{{ g.nombre }}</a>
+      {%- endfor %}
+    </nav>
+
+    {%- for g in site.data.equipo %}
+    <section class="team-group" id="{{ g.id }}" aria-labelledby="{{ g.id }}-titulo">
+      <div class="team-head">
+        <h2 id="{{ g.id }}-titulo">{{ g.nombre }}</h2>
+        {%- if g.descripcion and g.descripcion != "" %}
+        <p>{{ g.descripcion }}</p>
+        {%- endif %}
+      </div>
+      {%- if g.integrantes and g.integrantes.size > 0 %}
+      <ul class="board">
+        {%- for m in g.integrantes %}
+        <li class="member">
+          {% include foto.html src=m.foto label="" clase="avatar" alt=m.nombre %}
+          <p class="role">{{ m.cargo }}</p>
+          <p class="name">{% if m.nombre and m.nombre != "" %}{{ m.nombre }}{% else %}Próximamente{% endif %}</p>
+          {%- if m.descripcion and m.descripcion != "" %}<p class="bio">{{ m.descripcion }}</p>{% endif %}
+        </li>
+        {%- endfor %}
+      </ul>
+      {%- else %}
+      <p class="team-empty">Pronto presentaremos a sus integrantes.</p>
+      {%- endif %}
+    </section>
+    {%- endfor %}
+
+    <a class="link-arrow" href="{{ '/estructura.html' | relative_url }}">Cómo se estructura CUUNA {% include icono.html nombre="flecha" %}</a>
+  </div>
+</section>
