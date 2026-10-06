@@ -281,7 +281,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .split-top { align-items: start; }
 .split > div > p { color: var(--ink-2); }
 .split strong { color: var(--ink); }
-.photo-tall { aspect-ratio: 5 / 6; border-radius: 28px; }
+.photo-tall { aspect-ratio: 4 / 3; border-radius: 28px; }
 
 .block { margin-top: clamp(56px, 7vw, 96px); }
 .block-title { font-size: clamp(1.4rem, 2.2vw, 1.8rem); font-weight: 800; margin-bottom: 1em; }
@@ -514,7 +514,6 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
   .footer-grid { grid-template-columns: 1fr; }
   .mission { grid-template-columns: repeat(2, 1fr); }
   .contact-wrap .socials { grid-template-columns: 1fr; }
-  .photo-tall { aspect-ratio: 4 / 3; }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }
