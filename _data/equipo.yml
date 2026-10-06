@@ -15,31 +15,31 @@
   integrantes:
     - cargo: Presidencia
       nombre: Juan Pablo Muñoz
-      descripcion: "Derecho · Pontificia Universidad Católica de Chile"
+      descripcion: ""
       foto: /img/equipo/juan-pablo-munoz.jpg
     - cargo: Vicepresidencia
       nombre: Juana Pina Molinari
-      descripcion: "Relaciones Internacionales · Pontificia Universidad Católica de Chile"
+      descripcion: ""
       foto: /img/equipo/juana-pina.jpg
     - cargo: Secretaría
       nombre: Francisco Díaz
-      descripcion: "Derecho · Universidad de Valparaíso"
+      descripcion: ""
       foto: /img/equipo/francisco-diaz.jpg
     - cargo: Tesorería
       nombre: Felipe Payero
-      descripcion: "Ciencia Política y Relaciones Internacionales · Universidad Alberto Hurtado"
+      descripcion: ""
       foto: /img/equipo/felipe-payero.jpg
     - cargo: Dirección
       nombre: Emilia Araneda
-      descripcion: "Ingeniería Civil Química · Universidad de Concepción"
+      descripcion: ""
       foto: /img/equipo/emilia-araneda.jpg
     - cargo: Dirección
       nombre: Naira Duarte
-      descripcion: "Ciencia Política · Universidad Diego Portales"
+      descripcion: ""
       foto: /img/equipo/naira-duarte.jpg
     - cargo: Dirección
       nombre: Victoria Quintero
-      descripcion: "Relaciones Internacionales · Pontificia Universidad Católica de Chile"
+      descripcion: ""
       foto: /img/equipo/victoria-quintero.jpg
 
 # TODO: descripción de la Comisión de Ética.
