@@ -1,17 +1,15 @@
-# Carrusel "Así se vive un MUN" de la portada. Fotos en formato 4:5; vacía = marcador.
-- pie: Harvard WorldMUN 2026 · Lima
-  foto: ""
+# Carrusel "Así se vive un MUN" de la portada. Fotos en /img/fotos/ (se recortan a 4:5).
 - pie: La DeCI en comité
-  foto: ""
+  foto: /img/fotos/deci-en-comite.jpg
 - pie: AMNUCH Valparaíso
-  foto: ""
+  foto: /img/fotos/amnuch-valparaiso.jpg
 - pie: Visita a la CEPAL
-  foto: ""
-- pie: MUN Escolar
-  foto: ""
+  foto: /img/fotos/visita-cepal.jpg
 - pie: Preparación de la delegación
-  foto: ""
-- pie: Asamblea General
-  foto: ""
+  foto: /img/fotos/preparacion-delegacion.jpg
+- pie: MUN Escolar
+  foto: /img/fotos/mun-escolar.jpg
+- pie: Delegación Chilena Interuniversitaria
+  foto: /img/fotos/deci.jpg
 - pie: Equipo CUUNA
-  foto: ""
+  foto: /img/fotos/equipo.jpg

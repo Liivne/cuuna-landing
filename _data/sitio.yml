@@ -1,4 +1,4 @@
-# Datos generales del sitio (editables desde Pages CMS en "Datos del sitio").
+# Datos generales del sitio.
 redes:
   instagram: https://www.instagram.com/cuuna.cl
   linkedin: https://www.linkedin.com/company/cuunacl/home/
@@ -6,10 +6,10 @@ redes:
 
 # Fotos fijas de las páginas. Vacío = se muestra el marcador con el isotipo.
 fotos:
-  portada: ""
-  equipo: ""
-  deci: ""
-  mun_escolar: ""
+  portada: /img/fotos/portada.jpg
+  equipo: /img/fotos/equipo.jpg
+  deci: /img/fotos/deci.jpg
+  mun_escolar: /img/fotos/mun-escolar.jpg
 
 # Vacío = "Por completar".
 donaciones:
