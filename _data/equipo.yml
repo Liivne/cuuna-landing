@@ -14,33 +14,33 @@
   descripcion: "Dirige y administra la institución. Sus integrantes son elegidos cada año por la Asamblea General, pueden ser reelegidos hasta dos veces y deciden de forma democrática: un integrante, un voto."
   integrantes:
     - cargo: Presidencia
-      nombre: ""
+      nombre: Juan Pablo Muñoz
       descripcion: ""
-      foto: ""
+      foto: /img/equipo/juan-pablo-munoz.jpg
     - cargo: Vicepresidencia
-      nombre: ""
+      nombre: Juana Pina
       descripcion: ""
-      foto: ""
+      foto: /img/equipo/juana-pina.jpg
     - cargo: Secretaría
-      nombre: ""
+      nombre: Francisco Díaz
       descripcion: ""
-      foto: ""
+      foto: /img/equipo/francisco-diaz.jpg
     - cargo: Tesorería
-      nombre: ""
+      nombre: Felipe Payero
       descripcion: ""
-      foto: ""
+      foto: /img/equipo/felipe-payero.jpg
     - cargo: Dirección
-      nombre: ""
+      nombre: Emilia Araneda
       descripcion: ""
-      foto: ""
+      foto: /img/equipo/emilia-araneda.jpg
     - cargo: Dirección
-      nombre: ""
+      nombre: Naira Duarte
       descripcion: ""
-      foto: ""
+      foto: /img/equipo/naira-duarte.jpg
     - cargo: Dirección
-      nombre: ""
+      nombre: Victoria Quintero
       descripcion: ""
-      foto: ""
+      foto: /img/equipo/victoria-quintero.jpg
 
 # TODO: descripción de la Comisión de Ética.
 - id: comision-de-etica
