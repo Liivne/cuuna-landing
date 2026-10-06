@@ -80,5 +80,4 @@ tipografía Montserrat. Los logos están en `img/` (isotipo, logotipo y logotipo
 - Fecha de cada noticia (sin ella se ordenan alfabéticamente).
 - Datos de transferencia para donaciones (banco, cuenta, RUT) o enlace a una plataforma.
 - Requisitos, plazos y enlace del formulario para postular a la DeCI (`TODO` en `deci.html`).
-- Integrantes del equipo 2026–2027 (Directorio, comisiones y coordinaciones), con descripción y foto.
-- Fotos de portada, equipo, DeCI, MUN Escolar, carrusel y noticias.
+- Descripción de la Comisión de Ética, la Comisión Revisora de Cuentas y las Coordinaciones (`_data/equipo.yml`).
