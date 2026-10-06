@@ -6,6 +6,18 @@
   <title>{% if page.url == '/' %}{{ site.title }} · {{ site.nombre_completo }}{% else %}{{ page.title }} · {{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ page.description | default: page.resumen | default: page.lead | default: site.description | strip_html | strip_newlines | escape }}">
   <meta name="theme-color" content="#37b2f8">
+  {%- capture titulo_social %}{% if page.url == '/' %}{{ site.title }} · {{ site.nombre_completo }}{% else %}{{ page.title }} · {{ site.title }}{% endif %}{% endcapture %}
+  {%- capture descripcion_social %}{{ page.description | default: page.resumen | default: page.lead | default: site.description | strip_html | strip_newlines }}{% endcapture %}
+  {%- if page.imagen and page.imagen != "" %}{% assign imagen_social = page.imagen %}{% else %}{% assign imagen_social = '/img/compartir.jpg' %}{% endif %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="{% if page.collection == 'noticias' %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:title" content="{{ titulo_social | strip | escape }}">
+  <meta property="og:description" content="{{ descripcion_social | strip | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ imagen_social | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="{{ '/img/favicon.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/img/apple-touch-icon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">

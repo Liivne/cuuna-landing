@@ -6,7 +6,7 @@ description: >-
 lang: es-CL
 
 # Dirección pública (Vercel sirve el sitio desde la raíz, sin subcarpeta).
-url: ""
+url: https://cuuna.cl
 baseurl: ""
 
 markdown: kramdown
