@@ -18,7 +18,17 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ imagen_social | absolute_url }}">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="{{ '/img/favicon.png' | relative_url }}">
+  {%- if page.url == '/' %}
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"WebSite","name":"{{ site.title }}","alternateName":"{{ site.nombre_completo }}","url":"{{ '/' | absolute_url }}"},
+    {"@type":"Organization","name":"{{ site.title }}","legalName":"{{ site.nombre_completo }}","url":"{{ '/' | absolute_url }}","logo":"{{ '/img/icono-192.png' | absolute_url }}",
+     "sameAs":["{{ site.data.sitio.redes.instagram }}","{{ site.data.sitio.redes.linkedin }}"]}
+  ]}
+  </script>
+  {%- endif %}
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="48x48">
+  <link rel="icon" type="image/png" href="{{ '/img/icono-192.png' | relative_url }}" sizes="192x192">
   <link rel="apple-touch-icon" href="{{ '/img/apple-touch-icon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
