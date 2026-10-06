@@ -42,11 +42,27 @@
       descripcion: ""
       foto: ""
 
-# TODO: descripción e integrantes de la Comisión de Ética.
+# TODO: descripción de la Comisión de Ética.
 - id: comision-de-etica
   nombre: Comisión de Ética
   descripcion: ""
-  integrantes: []
+  integrantes:
+    - cargo: Integrante
+      nombre: Francisca Vergara
+      descripcion: ""
+      foto: /img/equipo/francisca-vergara.jpg
+    - cargo: Integrante
+      nombre: Rocío Contreras
+      descripcion: ""
+      foto: /img/equipo/rocio-contreras.jpg
+    - cargo: Integrante
+      nombre: Sofía Briceño
+      descripcion: ""
+      foto: /img/equipo/sofia-briceno.jpg
+    - cargo: Integrante
+      nombre: Tamara Zamorano
+      descripcion: ""
+      foto: /img/equipo/tamara-zamorano.jpg
 
 # TODO: descripción e integrantes de la Comisión Revisora de Cuentas.
 - id: comision-revisora-de-cuentas
